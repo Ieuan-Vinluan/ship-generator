@@ -3,6 +3,7 @@
     font-family: Trebuchet MS;
     color: white;
     text-align: center;
+    box-sizing: border-box;
 }
 @keyframes fade-in {
     from {margin-top: 50px; opacity: 0;}
@@ -25,6 +26,10 @@ a {
 .main-content {
     margin: 20px;
 }
+.person-container {
+    display: flex;
+    justify-content: space-around;
+}
 .left-container {
     float: left;
     margin: 10px;
@@ -32,7 +37,7 @@ a {
     border: 4px solid #000080;
     border-radius: 15px;
     background: #000020;
-    width: 42.5%;
+    width: 50%;
     padding: 30px;
     font-family: monospace;
     font-size: 1.5em;
@@ -46,12 +51,15 @@ a {
     border: 4px solid #800000;
     border-radius: 15px;
     background: #200000;
-    width: 42.5%;
+    width: 50%;
     padding: 30px;
     font-family: monospace;
     font-size: 1.5em;
     font-weight: bold;
     transition: all 1s;
+}
+#lockB, #lockG {
+    font-size: 1rem;
 }
 .activate-button {
     background-color: #002000;
@@ -84,9 +92,10 @@ a {
     border-radius: 15px;
     width: 6.25%;
     padding: 5px;
-    font-family: monospace;
+    /* font-family: monospace; */
     font-size: 0.8em;
     font-weight: bold;
+    padding: 1em 2em !important;
 }
 .straight {
     margin: auto;
@@ -95,9 +104,10 @@ a {
     border-radius: 15px;
     width: 6.25%;
     padding: 5px;
-    font-family: monospace;
+    /* font-family: monospace; */
     font-size: 0.8em;
     font-weight: bold;
+    padding: 1em 2em !important;
 }
 .lesbian {
     margin: auto;
@@ -106,9 +116,10 @@ a {
     border-radius: 15px;
     width: 6.25%;
     padding: 5px;
-    font-family: monospace;
+    /* font-family: monospace; */
     font-size: 0.8em;
     font-weight: bold;
+    padding: 1em 2em !important;
 }
 #batchB, #batchG {
     margin: auto;
@@ -119,4 +130,103 @@ a {
     font-size: 1.2em;
     font-weight: bold;
     transition: all 0.5s;
+}
+
+.ship-container {
+    width: 40%;
+}
+
+@media only screen and (max-width: 800px) {
+    .left-container, .right-container {
+        height: 7em !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #boy, #girl {
+        font-size: .95rem;
+    }
+
+    #b-lock, #g-lock {
+        padding: 0.5em 2em;
+        width: auto !important;
+        margin: 10px; 
+        overflow: auto; 
+        text-align: center; 
+        font-family: monospace; 
+        font-size: .9rem;
+        position: relative;
+        display: inline-block !important;
+    }
+
+    #lockB, #lockG {
+        display: inline-block !important;
+        width: 100% !important;
+    }
+
+    #batchB, #batchG {
+        width: auto !important;
+        padding: 0 1em;
+    }
+    
+    #batch-container {
+        display: flex;
+        position: relative;
+        top: 1em;
+        margin-bottom: 1.5em !important;
+    }
+
+    #button-container {
+        position: relative;
+        top: 1em;
+        display: flex;
+    }
+
+    #generate-button {
+        width: 50%;
+        font-size: 1rem;
+    }
+
+    .undo-button {
+        width: 25%;
+        font-size: 1rem;
+    }
+
+    button.lesbian, button.gay, button.straight {
+        width: 35% !important;
+        text-align: center;
+        padding: 1.5em;
+        font-size: .7rem;
+        box-sizing: unset;
+        margin: 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: .5em;
+    }
+
+    .activate-button {
+        text-align: center;
+    }
+
+    .ship-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        overflow-y: hidden !important;
+        margin: 0 !important;
+        padding-bottom: 1em;
+    }
+
+    #bottom-part {
+        position: relative;
+        top: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
 }
